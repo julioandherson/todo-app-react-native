@@ -6,6 +6,7 @@ import { useMutation, useQuery } from "convex/react";
 import { StyleSheet, StatusBar, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "@/components/Header";
+import TodoInput from "@/components/TodoInput";
 
 export default function Index() {
   const {toggleDarkMode} = useTheme();
@@ -26,11 +27,8 @@ export default function Index() {
       <SafeAreaView style={{...homeStyles.safeArea}} >
 
         <Header />
+        <TodoInput />
 
-
-        {/* <TouchableOpacity onPress={toggleDarkMode}>
-          <Text>Toggle Dark Mode</Text>
-        </TouchableOpacity> */}
       </SafeAreaView>
     </LinearGradient>
 
