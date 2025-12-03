@@ -1,10 +1,17 @@
+import { createHomeStyles } from "@/assets/styles/home.styles";
 import { api } from "@/convex/_generated/api";
+import { LinearGradient } from "expo-linear-gradient";
 import { useTheme } from "@/hooks/useTheme";
 import { useMutation, useQuery } from "convex/react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, StatusBar, Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import Header from "@/components/Header";
 
 export default function Index() {
   const {toggleDarkMode} = useTheme();
+
+  const { colors } = useTheme();
+  const homeStyles = createHomeStyles(colors);
 
   // #Just to validade Convex is working
   // const todos = useQuery(api.todos.getTodos);
@@ -13,27 +20,19 @@ export default function Index() {
   // const deleteTodo = useMutation(api.todos.clearAllTodos);
 
   return (
-    <View style={{...styles.container}} >
-      <Text>Edit app/index.tsx to edit this screens.</Text>
 
-      <TouchableOpacity onPress={toggleDarkMode}>
-        <Text>Toggle Dark Mode</Text>
-      </TouchableOpacity>
+    <LinearGradient colors={colors.gradients.background} style={homeStyles.container}>
+      <StatusBar barStyle={colors.statusBarStyle} />
+      <SafeAreaView style={{...homeStyles.safeArea}} >
 
-    </View>
+        <Header />
+
+
+        {/* <TouchableOpacity onPress={toggleDarkMode}>
+          <Text>Toggle Dark Mode</Text>
+        </TouchableOpacity> */}
+      </SafeAreaView>
+    </LinearGradient>
+
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-    otherStyle: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "blue",
-  },
-});
