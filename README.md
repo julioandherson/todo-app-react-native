@@ -29,10 +29,9 @@ React Navigation (Bottom Tabs)
 
 ## 🖼️ Screenshots
 
-<img src="screenshots/rn1.png" width="300"/>
-<img src="screenshots/rn2.png" width="300"/>
-<img src="screenshots/rn3.png" width="300"/>
-<img src="screenshots/rn4.png" width="300"/>
+<img src="screenshots/rn1.png" width="300"/><img src="screenshots/rn2.png" width="300"/>
+
+<img src="screenshots/rn3.png" width="300"/><img src="screenshots/rn4.png" width="300"/>
 
 ## 📦 Installation
 
