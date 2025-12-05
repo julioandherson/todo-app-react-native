@@ -1,50 +1,78 @@
-# Welcome to your Expo app 👋
+# Todo List App (React Native + Expo + Convex)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple and efficient Todo List mobile application built with React Native, Expo, and Convex for real-time backend synchronization.
 
-## Get started
+The app is organized into two main tabs:
+    Home: Create, edit, and delete tasks.
+    Settings: Toggle dark mode, delete all tasks, and view task statistics.
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+Home Tab
+    -Add new tasks
+    -Edit existing tasks
+    -Delete individual tasks
+    -Tasks synced in real time using Convex
 
-2. Start the app
+Settings Tab
+    -Enable/disable Dark Mode
+    -Delete all tasks at once
+    -View a task report (total, pending, completed)
 
-   ```bash
-   npx expo start
-   ```
+## 🛠️ Tech Stack
 
-In the output, you'll find options to open the app in a
+React Native
+Expo
+TypeScript
+Convex (Backend as a Service)
+React Navigation (Bottom Tabs)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🖼️ Screenshots
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+<img src="screenshots/rn1.png" width="300"/>
+<img src="screenshots/rn2.png" width="300"/>
+<img src="screenshots/rn3.png" width="300"/>
+<img src="screenshots/rn4.png" width="300"/>
 
-## Get a fresh project
+## 📦 Installation
 
-When you're ready, run:
+Clone the repository:
 
-```bash
-npm run reset-project
-```
+git clone https://github.com/julioandherson/todo-app-react-native.git
+cd todo-app-react-native
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Install dependencies:
+npm install
 
-## Learn more
+Install Convex CLI (if not installed):
+npm install -g convex
 
-To learn more about developing your project with Expo, look at the following resources:
+## ▶️ How to Run the Project (Expo + Convex)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+The app requires two processes running at the same time:
+✔️ The Convex backend
+✔️ The Expo app
 
-## Join the community
+1. Start Convex
 
-Join our community of developers creating universal apps.
+Inside the project folder, run:
+npx convex dev
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This will start the Convex backend on a local development URL and watch for changes in your convex/ folder.
+
+Keep this terminal open.
+
+2. Start the Expo App
+
+Open a new terminal tab/window and run:
+npx expo start
+
+Expo will open a local server where you can:
+
+Press i to run on iOS Simulator
+
+Press a to run on Android Emulator
+
+Or scan the QR code using Expo Go on your phone
+
+Make sure Convex is already running so the app can connect to it.
