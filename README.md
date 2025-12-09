@@ -9,15 +9,23 @@ The app is organized into two main tabs:
 ## 🚀 Features
 
 Home Tab
-    -Add new tasks
-    -Edit existing tasks
-    -Delete individual tasks
-    -Tasks synced in real time using Convex
+
+    * Add new tasks
+    
+    * Edit existing tasks
+    
+    * Delete individual tasks
+    
+    * Tasks synced in real time using Convex
+    
 
 Settings Tab
-    -Enable/disable Dark Mode
-    -Delete all tasks at once
-    -View a task report (total, pending, completed)
+
+    * Enable/disable Dark Mode
+    
+    * Delete all tasks at once
+    
+    * View a task report (total, pending, completed)
 
 ## 🛠️ Tech Stack
 
